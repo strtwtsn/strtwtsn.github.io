@@ -107,6 +107,15 @@ d3.tsv("data.tsv", type, function(error, data) {
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis)
+ .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Blah");
+
+
+
    .selectAll("text")
     .attr("y", 0)
     .attr("x", 9)
@@ -114,12 +123,7 @@ d3.tsv("data.tsv", type, function(error, data) {
     .attr("transform", "rotate(90)")
     .style("text-anchor", "start")
 //    .text("Site")
-.append("text")
-    .attr("x", width / 2)
-    .attr("y", margin.bottom - 10)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("XAxis");
+
 
 
 
