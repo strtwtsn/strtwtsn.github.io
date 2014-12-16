@@ -143,13 +143,14 @@ d3.tsv("data.tsv", type, function(error, data) {
 
 });
 
+// Added
 
 svg.append("text")
   .text("Bar Chart")
-  .attr("x", width / 4)
+  .attr("x", width / 2)
   .attr("class","title");
-
-
+  .attr("y", margin.bottom - 10)
+// Added
 
 
 
