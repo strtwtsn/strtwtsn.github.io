@@ -169,20 +169,5 @@ function type(d) {
 
 
 
-// Added for labels
-
-svg.selectAll(".label")
-    .data(data)
-    .enter().append("svg:text")
-        .attr("class", "label")
-        .attr("x", function(d) {
-            return x(d[X_AXIS_COLUMN]) + x.rangeBand() / 3;
-        })
-        .attr("y", function(d) {
-            return y(d[Y_AXIS_COLUMN]) - 5;
-        })
-        .text(function(d) {
-            return Y_DATA_FORMAT(d[Y_AXIS_COLUMN]);
-        });
 
 </script>
