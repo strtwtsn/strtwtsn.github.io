@@ -143,6 +143,31 @@ d3.tsv("data.tsv", type, function(error, data) {
 
 });
 
+// Added for bar chart text
+
+svg.selectAll(".bartext")
+.data(data)
+.enter()
+.append("text")
+.attr("class", "bartext")
+.attr("text-anchor", "middle")
+.attr("fill", "white")
+.attr("x", function(d,i) {
+    return x(i)+x.rangeBand()/2;
+})
+.attr("y", function(d,i) {
+    return height-y(d)+yTextPadding;
+})
+.text(function(d){
+     return d;
+});
+
+//
+
+
+
+
+
 // Added
 
 svg.append("text")
