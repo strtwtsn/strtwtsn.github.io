@@ -144,17 +144,6 @@ d3.tsv("data.tsv", type, function(error, data) {
 });
 
 
-svg.append("text")
-     .attr("x", x)
-     .attr("y", function(d) { return y(d) + y.rangeBand() / 2; })
-     .attr("dx", -3) // padding-right
-     .attr("dy", ".35em") // vertical-align: middle
-     .attr("text-anchor", "end") // text-align: right
-     .text(String);
-
-
-
-
 // Added
 
 svg.append("text")
