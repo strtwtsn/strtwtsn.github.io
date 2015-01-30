@@ -129,18 +129,5 @@ d.value = +d.value;
 return d;
 }
 
-labels = vis.selectAll("g.bar")
-    .append("svg:text")
-    .attr("class", "value")
-    .attr("x", function(d)
-            {
-            return x(d.value) + right_margin + 10;
-            })
-    .attr("text-anchor", "left")
-    .text(function(d)
-    {
-        return "" + d.value + "%";
-    });
-    
-    
+
 </script>
